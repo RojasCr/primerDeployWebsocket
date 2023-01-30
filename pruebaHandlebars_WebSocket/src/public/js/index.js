@@ -9,6 +9,7 @@ const socket = io();
 const res = document.getElementById("res");
 const user = document.getElementById("user");
 const text = document.getElementById("text");
+const enviarButton = document.getElementById("imagen");
 
 
 document.addEventListener("keydown", (e) => {
@@ -19,7 +20,20 @@ document.addEventListener("keydown", (e) => {
         socket.emit("message", `User ${socket.id}: ${text.value}`);
         text.value = "";
     }
+
 });
+document.addEventListener("click", (e) => {
+    socket.id = user.value;
+    //console.log(e.key);
+    
+    if(e.target === enviarButton){
+        socket.emit("message", `User ${socket.id}: ${text.value}`);
+        text.value = "";
+        console.log(e.target)
+    }
+
+});
+
 
 socket.on("mensajeGrupal", data => {
     console.log(data);
