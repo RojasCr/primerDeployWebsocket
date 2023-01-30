@@ -1,4 +1,4 @@
-<div>
+<div id="contenedorChat">
     {{!-- <h1>¡Hola {{user.name}}!</h1>
     {{#if isAdmin}}
         <h2>¡Bienvenido {{user.role}}!</h2>
@@ -8,9 +8,13 @@
             <p>{{this.price}}</p>
         {{/each}}
     {{/if}} --}}
-    <input type="text" id="user">
-    <input type="text" id="text">
-    <p id="res"></p>
+    <input type="text" id="user" placeholder="Ingrese nickname">
+    <div id="res"></div>
+
+    <div id="contenedorText">
+        <input type="text" placeholder="Enviar mensaje..." id="text">
+        <button><img id="imagen" src="https://w7.pngwing.com/pngs/841/271/png-transparent-computer-icons-send-miscellaneous-angle-triangle.png" alt=""></button>
+    </div>
 </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/index.js"></script>

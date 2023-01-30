@@ -15,6 +15,7 @@ router.get("/", (req, res) => {
 
     res.render("index", {
         user: user,
+        style: "index.css",
         isAdmin: user.role === "admin",
         food
     });
