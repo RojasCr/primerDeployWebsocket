@@ -13,7 +13,13 @@
 
     <div id="contenedorText">
         <input type="text" placeholder="Enviar mensaje..." id="text">
-        <button id="enviar"><img id="imagen" src="https://w7.pngwing.com/pngs/841/271/png-transparent-computer-icons-send-miscellaneous-angle-triangle.png" alt=""></button>
+        <div id="archivoBtn">
+            <a>
+                <img class="imagen" src="https://w7.pngwing.com/pngs/147/42/png-transparent-computer-icons-paper-clip-email-attachment-others-miscellaneous-document-file-format-email-attachment.png" alt="">
+            </a>
+            <input id = "file" type="file" >
+        </div>
+        <button id="enviarBtn"><img id="enviarImg" class="imagen" src="https://w7.pngwing.com/pngs/841/271/png-transparent-computer-icons-send-miscellaneous-angle-triangle.png" alt=""></button>
     </div>
 </div>
     <script src="/socket.io/socket.io.js"></script>

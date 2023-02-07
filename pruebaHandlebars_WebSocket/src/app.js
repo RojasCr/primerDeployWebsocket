@@ -36,6 +36,12 @@ socketServer.on("connection", socket => {
         messages.push(data);
         socketServer.emit("mensajeGrupal", messages);
     });
+    socket.on("enviarArchivo", (data) => {
+        //console.log(data);
+        let img = `<img src=${data} style = "width: 10rem; heigth: 20rem;">`
+        messages.push(img);
+        socketServer.emit("archivoRecibido", messages);
+    });
 
     socket.on("disconnect", () => {console.log("Cliente desconectado: " + socket.id)})
 });
